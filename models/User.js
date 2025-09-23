@@ -9,4 +9,7 @@ const UserSchema = new mongoose.Schema({
   createdAt: { type: Date, default: Date.now }
 });
 
-export default mongoose.model('User', UserSchema);
+// Prevent OverwriteModelError on hot reloads / nodemon restarts
+const User = mongoose.models.User || mongoose.model('User', UserSchema);
+
+export default User;
