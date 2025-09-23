@@ -2,6 +2,7 @@
   "name": "auth-backend",
   "version": "1.0.0",
   "description": "A Node.js + Express backend for user authentication with registration and login functionality using MongoDB and bcrypt.",
+  "type": "module",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
