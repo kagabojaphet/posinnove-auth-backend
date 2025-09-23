@@ -3,6 +3,8 @@ import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import { validationResult } from 'express-validator';
 import User from '../models/user.js';
+
+
 import sendEmail from '../utils/email.js';
 
 const ACCESS_EXPIRES = process.env.JWT_EXPIRES_IN || '15m';
